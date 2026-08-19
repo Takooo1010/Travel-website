@@ -1,6 +1,201 @@
-  我的專屬旅程
-    
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花東放鬆之旅 ｜ 彰儀 & 小烈</title>
+    <style>
+        /* 基礎設定與日系配色 */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F7F6F2;
+            color: #4A4A4A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #5C6E58;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 12px 0 0;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #5C6E58;
+            border-bottom: 2px solid #E0DCD3;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        /* 卡片式設計 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        /* 待辦清單與行李清單樣式 */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #E0DCD3;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+        input[type="checkbox"] {
+            margin-right: 12px;
+            accent-color: #5C6E58;
+            width: 16px;
+            height: 16px;
+        }
+        /* 每日行程時間軸樣式 */
+        .timeline-item {
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .time {
+            font-weight: bold;
+            color: #8C7A6B;
+            width: 65px;
+            flex-shrink: 0;
+            font-size: 15px;
+        }
+        .event {
+            flex-grow: 1;
+            font-size: 15px;
+        }
+        .highlight {
+            color: #D98880; /* 柔和的紅色，用來標示重要資訊 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>彰儀 & 小烈的花東之旅</h1>
+        <p>2026.09.02 - 09.04 ｜ 花蓮 ➞ 台東池上</p>
+    </header>
 
-    我們的旅行準備清單
-    網站架設成功囉！
+    <div class="container">
+        <!-- ＝＝＝ 行前準備區塊 ＝＝＝ -->
+        <h2 class="section-title">行前準備</h2>
+
+        <div class="card">
+            <h3>🎒 行李清單 (3天2夜)</h3>
+            <ul>
+                <li><input type="checkbox"> <span class="highlight">學生證 (台鐵7折票必備查驗！)</span></li>
+                <li><input type="checkbox"> 身分證、健保卡、機車駕照</li>
+                <li><input type="checkbox"> 換洗衣物與防曬用品</li>
+                <li><input type="checkbox"> 盥洗用品與日常保養</li>
+                <li><input type="checkbox"> 行動電源與充電線</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>📝 待辦事項</h3>
+            <ul>
+                <li><input type="checkbox"> 預訂花蓮/池上當地租機車</li>
+                <li><input type="checkbox"> 討論第二天沿海/縱谷沿路景點</li>
+                <li><input type="checkbox"> 準備路上聽的音樂歌單</li>
+            </ul>
+        </div>
+
+        <!-- ＝＝＝ 旅途中區塊 ＝＝＝ -->
+        <h2 class="section-title">旅途中行程</h2>
+
+        <div class="card">
+            <h3>📍 Day 1：9/2 (三) 花蓮走透透</h3>
+            <div class="timeline-item">
+                <div class="time">去程</div>
+                <div class="event">搭乘台鐵 <span class="highlight">410次</span> (台北 ➞ 花蓮) 🚄</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">白天</div>
+                <div class="event">花蓮市區/近郊騎車漫遊、吃美食</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">住宿</div>
+                <div class="event">入住：花蓮承億文旅</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📍 Day 2：9/3 (四) 一路向南</h3>
+            <div class="timeline-item">
+                <div class="time">白天</div>
+                <div class="event">從花蓮出發，沿路騎車玩到池上 🛵</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">下午</div>
+                <div class="event">抵達池上，感受田野風光</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">住宿</div>
+                <div class="event">入住：池上日暉伯爵別墅</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📍 Day 3：9/4 (五) 池上放空與賦歸</h3>
+            <div class="timeline-item">
+                <div class="time">白天</div>
+                <div class="event">享受日暉設施、池上周邊景點</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">回程</div>
+                <div class="event">搭乘台鐵 <span class="highlight">21次</span> (池上 ➞ 台北) 🚄</div>
+            </div>
+        </div>
+        
+        <!-- ＝＝＝ 交通與住宿統整 ＝＝＝ -->
+        <h2 class="section-title">交通與住宿總覽</h2>
+        
+        <div class="card">
+            <h3>💡 實用資訊備忘錄</h3>
+            <ul>
+                <li><strong>9/2 住宿：</strong> 花蓮承億文旅</li>
+                <li><strong>9/3 住宿：</strong> 池上日暉國際渡假村 (伯爵別墅)</li>
+                <li><strong>去程火車：</strong> 410次 台北到花蓮</li>
+                <li><strong>回程火車：</strong> 21次 池上到台北</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
