@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>花東放鬆之旅 ｜ 彰儀 & 小烈</title>
+    <title>花東放鬆之旅 ｜ たこ & 小烈</title>
     <style>
         /* 基礎設定與日系配色 */
         body {
@@ -107,7 +107,7 @@
 <body>
 
     <header>
-        <h1>彰儀 & 小烈的花東之旅</h1>
+        <h1>たこ & 小烈的花東之旅</h1>
         <p>2026.09.02 - 09.04 ｜ 花蓮 ➞ 台東池上</p>
     </header>
 
@@ -145,7 +145,7 @@
                     <div class="list-category">必備證件與金錢</div>
                     <li><input type="checkbox"> 身分證、健保卡、學生證 <span class="highlight">(查驗7折票)</span></li>
                     <li><input type="checkbox"> 汽、機車駕照</li>
-                    <li><input type="checkbox"> 信用卡、金融卡、現金</li>
+                    <li><input type="checkbox"> 信用卡、現金</li>
                     <li><input type="checkbox"> 租車鑰匙 / 個人車鑰匙</li>
                     
                     <div class="list-category">電子產品</div>
@@ -157,8 +157,8 @@
                     <li><input type="checkbox"> 拖鞋 / 去海邊玩的鞋</li>
                     <li><input type="checkbox"> 墨鏡 / 遮陽帽</li>
                     <li><input type="checkbox"> 髒衣收納袋</li>
-                    <li><input type="checkbox"> 薄外套 (防冷氣/防曬)</li>
-                    <li><input type="checkbox"> 泳衣、泳帽 (視渡假村設施需求)</li>
+                    <li><input type="checkbox"> 薄外套 </li>
+                    <li><input type="checkbox"> 泳衣、泳帽 </li>
                     
                     <div class="list-category">保養盥洗</div>
                     <li><input type="checkbox"> 防曬乳 (很重要！)</li>
@@ -350,7 +350,7 @@
                     <div class="expense-item">
                         <div style="flex-grow:1;">
                             <strong>${exp.name}</strong> <span style="font-size:12px;color:#777;">(共$${exp.paidZ + exp.paidX})</span><br>
-                            <span style="font-size:12px; color:#555;">彰儀付:${exp.paidZ} | 小烈付:${exp.paidX} | 比例:${exp.ratioLabel}</span>
+                            <span style="font-size:12px; color:#555;">たこ付:${exp.paidZ} | 小烈付:${exp.paidX} | 比例:${exp.ratioLabel}</span>
                         </div>
                         <button onclick="deleteExpense(${index})" style="background:none;border:none;color:#D98880;cursor:pointer;font-weight:bold;">刪除</button>
                     </div>
@@ -365,10 +365,10 @@
                 summary.innerHTML = "目前尚無記帳紀錄";
                 summary.style.color = "#5C6E58";
             } else if (netZ > 0) {
-                summary.innerHTML = `💸 小烈需要給彰儀：<strong>${Math.round(netZ)}</strong> 元`;
+                summary.innerHTML = `💸 小烈需要給たこ：<strong>${Math.round(netZ)}</strong> 元`;
                 summary.style.color = "#D98880";
             } else if (netX > 0) {
-                summary.innerHTML = `💸 彰儀需要給小烈：<strong>${Math.round(netX)}</strong> 元`;
+                summary.innerHTML = `💸 彰儀需要給たこ：<strong>${Math.round(netX)}</strong> 元`;
                 summary.style.color = "#D98880";
             } else {
                 summary.innerHTML = "🎉 目前帳目完美打平！";
