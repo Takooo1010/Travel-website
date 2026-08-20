@@ -57,8 +57,10 @@
             font-size: 16px;
             color: #333;
             margin-bottom: 15px;
+            border-left: 4px solid #5C6E58;
+            padding-left: 10px;
         }
-        /* 待辦清單與行李清單樣式 */
+        /* 清單樣式 */
         ul {
             list-style-type: none;
             padding: 0;
@@ -69,7 +71,7 @@
             border-bottom: 1px dashed #E0DCD3;
             display: flex;
             align-items: center;
-            font-size: 15px;
+            font-size: 14px;
         }
         ul li:last-child {
             border-bottom: none;
@@ -83,25 +85,43 @@
         /* 每日行程時間軸樣式 */
         .timeline-item {
             display: flex;
-            margin-bottom: 16px;
-        }
-        .timeline-item:last-child {
-            margin-bottom: 0;
+            margin-bottom: 20px;
+            background-color: #FAFAFA;
+            padding: 12px;
+            border-radius: 8px;
         }
         .time {
             font-weight: bold;
             color: #8C7A6B;
-            width: 65px;
+            width: 85px;
             flex-shrink: 0;
-            font-size: 15px;
+            font-size: 14px;
         }
         .event {
             flex-grow: 1;
-            font-size: 15px;
+            font-size: 14px;
+        }
+        .event-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .event-detail {
+            font-size: 13px;
+            color: #777;
         }
         .highlight {
-            color: #D98880; /* 柔和的紅色，用來標示重要資訊 */
+            color: #D98880;
             font-weight: bold;
+        }
+        /* 交通備註小標籤 */
+        .badge {
+            background-color: #E8E4D9;
+            color: #5C6E58;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
         }
     </style>
 </head>
@@ -117,84 +137,154 @@
         <h2 class="section-title">行前準備</h2>
 
         <div class="card">
-            <h3>🎒 行李清單 (3天2夜)</h3>
+            <h3>🎒 必備清單</h3>
             <ul>
                 <li><input type="checkbox"> <span class="highlight">學生證 (台鐵7折票必備查驗！)</span></li>
-                <li><input type="checkbox"> 身分證、健保卡、機車駕照</li>
+                <li><input type="checkbox"> 身分證、健保卡</li>
+                <li><input type="checkbox"> <span class="highlight">機車駕照 (租車必備)</span></li>
                 <li><input type="checkbox"> 換洗衣物與防曬用品</li>
-                <li><input type="checkbox"> 盥洗用品與日常保養</li>
-                <li><input type="checkbox"> 行動電源與充電線</li>
             </ul>
         </div>
-
+        
         <div class="card">
-            <h3>📝 待辦事項</h3>
-            <ul>
-                <li><input type="checkbox"> 預訂花蓮/池上當地租機車</li>
-                <li><input type="checkbox"> 討論第二天沿海/縱谷沿路景點</li>
-                <li><input type="checkbox"> 準備路上聽的音樂歌單</li>
-            </ul>
+            <h3>🛵 租機車資訊 (甲租乙還)</h3>
+            <div class="timeline-item">
+                <div class="event">
+                    <div class="event-title">滿溢小客車租車 / TR9 租車</div>
+                    <div class="event-detail">
+                        • <strong>取車：</strong>花蓮火車站前站<br>
+                        • <strong>還車：</strong>池上火車站周邊<br>
+                        • <strong>注意事項：</strong>這兩家都有提供花蓮借、池上還的服務，建議提早打電話預約，並確認異地還車的加價費用。另外，因為要上六十石山，<strong>務必租 125cc 以上的車款</strong>，馬力才夠且煞車較安全。
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- ＝＝＝ 旅途中區塊 ＝＝＝ -->
-        <h2 class="section-title">旅途中行程</h2>
-
+        <h2 class="section-title">Day 1：9/2 (三) 北海岸與日系市區</h2>
         <div class="card">
-            <h3>📍 Day 1：9/2 (三) 花蓮走透透</h3>
+            <h3>📍 行程總覽</h3>
+            
             <div class="timeline-item">
-                <div class="time">去程</div>
-                <div class="event">搭乘台鐵 <span class="highlight">410次</span> (台北 ➞ 花蓮) 🚄</div>
+                <div class="time">中午抵達</div>
+                <div class="event">
+                    <div class="event-title">搭乘 410 次火車抵達花蓮</div>
+                    <div class="event-detail">出站後前往租車行取車，隨後往北騎。</div>
+                </div>
             </div>
+            
             <div class="timeline-item">
-                <div class="time">白天</div>
-                <div class="event">花蓮市區/近郊騎車漫遊、吃美食</div>
+                <div class="time">13:30<br><span class="badge">騎車30分</span></div>
+                <div class="event">
+                    <div class="event-title">崇德瑩農場</div>
+                    <div class="event-detail">門票：100元 (15歲以下免費，可折抵園內消費)。有「台版紐西蘭」之稱，可以看海、餵動物。</div>
+                </div>
             </div>
+
             <div class="timeline-item">
-                <div class="time">住宿</div>
-                <div class="event">入住：花蓮承億文旅</div>
+                <div class="time">15:00<br><span class="badge">騎車15分</span></div>
+                <div class="event">
+                    <div class="event-title">新城老街 & 曼波海灘</div>
+                    <div class="event-detail">免門票。在老街吃「豆花兒」，順便去新城海堤與曼波海灘走走，享受靜謐海景。</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="time">16:30<br><span class="badge">騎車20分</span></div>
+                <div class="event">
+                    <div class="event-title">奇萊鼻燈塔 & 北濱公園</div>
+                    <div class="event-detail">免門票。燈塔本身不開放內部參觀，但可以在外面拍出白色塔身與大海的絕美合照。</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">17:30<br><span class="badge">騎車10分</span></div>
+                <div class="event">
+                    <div class="event-title">花蓮將軍府 1936</div>
+                    <div class="event-detail">免門票。開放至 22:30。這裡是非常有質感的日式宿舍群，傍晚光影很適合拍照，晚餐也可以直接在這裡的質感餐廳解決。</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="time">19:30</div>
+                <div class="event">
+                    <div class="event-title">市區宵夜 & Check-in</div>
+                    <div class="event-detail">
+                        入住：花蓮承億文旅<br>
+                        宵夜備案：東大門夜市、歐桑米粉湯、蔡記豆花、約伯賞茶(炸彈檸檬茶)。
+                    </div>
+                </div>
             </div>
         </div>
 
+        <h2 class="section-title">Day 2：9/3 (四) 台九線一路向南</h2>
         <div class="card">
-            <h3>📍 Day 2：9/3 (四) 一路向南</h3>
+            <h3>📍 行程總覽 (這天騎車距離較長)</h3>
+            
             <div class="timeline-item">
-                <div class="time">白天</div>
-                <div class="event">從花蓮出發，沿路騎車玩到池上 🛵</div>
+                <div class="time">09:00</div>
+                <div class="event">
+                    <div class="event-title">出發與早餐</div>
+                    <div class="event-detail">推薦吃壽豐早餐或黎明紅茶，買個 TOP王子手感烘培 的麵包路上吃。</div>
+                </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="time">10:00<br><span class="badge">騎車30分</span></div>
+                <div class="event">
+                    <div class="event-title">東華大學 & 鯉魚潭</div>
+                    <div class="event-detail">免門票。可以挑一個點進去散步拍照，感受湖光山色。</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">12:30<br><span class="badge">騎車50分</span></div>
+                <div class="event">
+                    <div class="event-title">大農大富 & 瑞穗牧場</div>
+                    <div class="event-detail">免門票。在光復市區吃午餐，接著到瑞穗牧場喝鮮奶休息，這段路程較長，務必在這裡休息。</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">15:00<br><span class="badge">騎車50分</span></div>
+                <div class="event">
+                    <div class="event-title">六十石山金針花海 (重頭戲)</div>
+                    <div class="event-detail">
+                        免門票。<span class="highlight">機車可雙向通行！</span> 由竹田村方向上下山。山路較陡，請小心騎乘。9月初剛好是滿開最美的時候！
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">18:00<br><span class="badge">騎車40分</span></div>
+                <div class="event">
+                    <div class="event-title">抵達池上 & Check-in</div>
+                    <div class="event-detail">入住：池上日暉伯爵別墅。辛苦了一天，好好在渡假村內放鬆！</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Day 3：9/4 (五) 池上放空與賦歸</h2>
+        <div class="card">
+            <h3>📍 行程總覽</h3>
+            
+            <div class="timeline-item">
+                <div class="time">早上</div>
+                <div class="event">
+                    <div class="event-title">日暉設施與池上慢遊</div>
+                    <div class="event-detail">享受日暉伯爵別墅的設施，退房後可去池上周邊（大坡池、伯朗大道）騎腳踏車。</div>
+                </div>
+            </div>
+
             <div class="timeline-item">
                 <div class="time">下午</div>
-                <div class="event">抵達池上，感受田野風光</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">住宿</div>
-                <div class="event">入住：池上日暉伯爵別墅</div>
+                <div class="event">
+                    <div class="event-title">還機車 & 搭車返家</div>
+                    <div class="event-detail">確認池上還車地點，搭乘 21 次火車 (池上 ➞ 台北)。</div>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h3>📍 Day 3：9/4 (五) 池上放空與賦歸</h3>
-            <div class="timeline-item">
-                <div class="time">白天</div>
-                <div class="event">享受日暉設施、池上周邊景點</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">回程</div>
-                <div class="event">搭乘台鐵 <span class="highlight">21次</span> (池上 ➞ 台北) 🚄</div>
-            </div>
-        </div>
-        
-        <!-- ＝＝＝ 交通與住宿統整 ＝＝＝ -->
-        <h2 class="section-title">交通與住宿總覽</h2>
-        
-        <div class="card">
-            <h3>💡 實用資訊備忘錄</h3>
-            <ul>
-                <li><strong>9/2 住宿：</strong> 花蓮承億文旅</li>
-                <li><strong>9/3 住宿：</strong> 池上日暉國際渡假村 (伯爵別墅)</li>
-                <li><strong>去程火車：</strong> 410次 台北到花蓮</li>
-                <li><strong>回程火車：</strong> 21次 池上到台北</li>
-            </ul>
-        </div>
     </div>
 
 </body>
