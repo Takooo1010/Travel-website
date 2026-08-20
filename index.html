@@ -124,7 +124,7 @@
                     <input type="text" id="exp-name" placeholder="項目 (如:午餐)">
                 </div>
                 <div class="expense-input">
-                    <input type="number" id="exp-z" placeholder="彰儀付$">
+                    <input type="number" id="exp-z" placeholder="たこ付$">
                     <input type="number" id="exp-x" placeholder="小烈付$">
                     <select id="exp-ratio">
                         <option value="55">平分 (5:5)</option>
@@ -175,6 +175,7 @@
                     <li><input type="checkbox"> 杯套、購物袋</li>
                     <li><input type="checkbox"> 隨身面紙 / 濕紙巾</li>
                     <li><input type="checkbox"> 保溫瓶 / 水壺</li>
+                    <li><input type="checkbox"> 野餐墊</li>
                 </ul>
             </div>
         </div>
@@ -368,7 +369,7 @@
                 summary.innerHTML = `💸 小烈需要給たこ：<strong>${Math.round(netZ)}</strong> 元`;
                 summary.style.color = "#D98880";
             } else if (netX > 0) {
-                summary.innerHTML = `💸 彰儀需要給たこ：<strong>${Math.round(netX)}</strong> 元`;
+                summary.innerHTML = `💸 たこ需要給小烈：<strong>${Math.round(netX)}</strong> 元`;
                 summary.style.color = "#D98880";
             } else {
                 summary.innerHTML = "🎉 目前帳目完美打平！";
