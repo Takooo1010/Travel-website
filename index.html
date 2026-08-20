@@ -75,11 +75,17 @@
         .event-detail { font-size: 13px; color: #777; }
         .highlight { color: #D98880; font-weight: bold; }
         
+        /* 多重導航按鈕群組 */
+        .nav-group {
+            margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        
         /* 導航按鈕 */
         .nav-btn {
             background-color: #E8E4D9; color: #5C6E58;
-            text-decoration: none; font-size: 12px; padding: 3px 8px;
+            text-decoration: none; font-size: 12px; padding: 4px 10px;
             border-radius: 12px; font-weight: normal;
+            display: inline-block;
         }
         .nav-btn:hover { background-color: #D3CFC3; }
         
@@ -128,10 +134,11 @@
                     <input type="number" id="exp-x" placeholder="小烈付$">
                     <select id="exp-ratio">
                         <option value="55">平分 (5:5)</option>
-                        <option value="64">彰6 : 烈4</option>
-                        <option value="46">彰4 : 烈6</option>
-                        <option value="73">彰7 : 烈3</option>
-                        <option value="37">彰3 : 烈7</option>
+                        <option value="64">たこ6 : 烈4</option>
+                        <option value="46">たこ4 : 烈6</option>
+                        <option value="73">たこ7 : 烈3</option>
+                        <option value="37">たこ3 : 烈7</option>
+                        <option value="00">不分錢 (各付各的)</option>
                     </select>
                     <button class="btn-add" onclick="addExpense()">新增</button>
                 </div>
@@ -145,7 +152,7 @@
                     <div class="list-category">必備證件與金錢</div>
                     <li><input type="checkbox"> 身分證、健保卡、學生證 <span class="highlight">(查驗7折票)</span></li>
                     <li><input type="checkbox"> 汽、機車駕照</li>
-                    <li><input type="checkbox"> 信用卡、現金</li>
+                    <li><input type="checkbox"> 信用卡、金融卡、現金</li>
                     <li><input type="checkbox"> 租車鑰匙 / 個人車鑰匙</li>
                     
                     <div class="list-category">電子產品</div>
@@ -157,8 +164,8 @@
                     <li><input type="checkbox"> 拖鞋 / 去海邊玩的鞋</li>
                     <li><input type="checkbox"> 墨鏡 / 遮陽帽</li>
                     <li><input type="checkbox"> 髒衣收納袋</li>
-                    <li><input type="checkbox"> 薄外套 </li>
-                    <li><input type="checkbox"> 泳衣、泳帽 </li>
+                    <li><input type="checkbox"> 薄外套 (防冷氣/防曬)</li>
+                    <li><input type="checkbox"> 泳衣、泳帽 (視渡假村設施需求)</li>
                     
                     <div class="list-category">保養盥洗</div>
                     <li><input type="checkbox"> 防曬乳 (很重要！)</li>
@@ -175,7 +182,6 @@
                     <li><input type="checkbox"> 杯套、購物袋</li>
                     <li><input type="checkbox"> 隨身面紙 / 濕紙巾</li>
                     <li><input type="checkbox"> 保溫瓶 / 水壺</li>
-                    <li><input type="checkbox"> 野餐墊</li>
                 </ul>
             </div>
         </div>
@@ -187,7 +193,10 @@
                 <div class="timeline-item">
                     <div class="time">07:55<br>台北出發</div>
                     <div class="event">
-                        <div class="event-title">搭乘 410 次火車 <a href="https://www.google.com/maps/search/?api=1&query=花蓮火車站" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            搭乘 410 次火車
+                            <a href="https://www.google.com/maps/search/?api=1&query=花蓮火車站" target="_blank" class="nav-btn">📍 抵達花蓮</a>
+                        </div>
                         <div class="event-detail">大約 10:14 抵達花蓮，出站後前往「滿溢小客車」或「TR9」取機車。</div>
                     </div>
                 </div>
@@ -195,7 +204,10 @@
                 <div class="timeline-item">
                     <div class="time">13:30</div>
                     <div class="event">
-                        <div class="event-title">崇德瑩農場 <a href="https://www.google.com/maps/search/?api=1&query=崇德瑩農場" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            崇德瑩農場
+                            <a href="https://www.google.com/maps/search/?api=1&query=崇德瑩農場" target="_blank" class="nav-btn">📍 農場導航</a>
+                        </div>
                         <div class="event-detail">門票 100 元 (可折抵消費)。看海、餵動物的台版紐西蘭。</div>
                     </div>
                 </div>
@@ -203,7 +215,11 @@
                 <div class="timeline-item">
                     <div class="time">15:00</div>
                     <div class="event">
-                        <div class="event-title">新城老街 & 曼波海灘 <a href="https://www.google.com/maps/search/?api=1&query=新城老街豆花兒" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            新城老街 & 曼波海灘
+                            <a href="https://www.google.com/maps/search/?api=1&query=新城老街豆花兒" target="_blank" class="nav-btn">📍 老街/豆花兒</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=曼波海灘" target="_blank" class="nav-btn">📍 曼波海灘</a>
+                        </div>
                         <div class="event-detail">在老街吃「豆花兒」，順便去海堤與沙灘走走。</div>
                     </div>
                 </div>
@@ -211,7 +227,11 @@
                 <div class="timeline-item">
                     <div class="time">16:30</div>
                     <div class="event">
-                        <div class="event-title">奇萊鼻燈塔 & 太平洋公園 <a href="https://www.google.com/maps/search/?api=1&query=奇萊鼻燈塔" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            奇萊鼻燈塔 & 太平洋公園
+                            <a href="https://www.google.com/maps/search/?api=1&query=奇萊鼻燈塔" target="_blank" class="nav-btn">📍 燈塔導航</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=太平洋公園" target="_blank" class="nav-btn">📍 公園導航</a>
+                        </div>
                         <div class="event-detail">拍白色燈塔，隨後去北濱/太平洋公園看夕陽海景。</div>
                     </div>
                 </div>
@@ -219,7 +239,10 @@
                 <div class="timeline-item">
                     <div class="time">17:30</div>
                     <div class="event">
-                        <div class="event-title">花蓮將軍府 1936 <a href="https://www.google.com/maps/search/?api=1&query=花蓮將軍府1936" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            花蓮將軍府 1936
+                            <a href="https://www.google.com/maps/search/?api=1&query=花蓮將軍府1936" target="_blank" class="nav-btn">📍 將軍府</a>
+                        </div>
                         <div class="event-detail">非常有質感的日式宿舍群，傍晚光影極佳。</div>
                     </div>
                 </div>
@@ -227,8 +250,20 @@
                 <div class="timeline-item">
                     <div class="time">晚上</div>
                     <div class="event">
-                        <div class="event-title">花蓮承億文旅 Check-in <a href="https://www.google.com/maps/search/?api=1&query=花蓮承億文旅" target="_blank" class="nav-btn">📍 導航</a></div>
-                        <div class="event-detail">宵夜可至東大門夜市、鵝肉先生或買約伯賞茶。</div>
+                        <div class="event-title">
+                            承億文旅 Check-in 
+                            <a href="https://www.google.com/maps/search/?api=1&query=花蓮承億文旅" target="_blank" class="nav-btn">📍 旅店導航</a>
+                        </div>
+                        <div class="event-detail">
+                            放好行李後，晚上就是花蓮市區美食巡禮時間！
+                            <div class="nav-group">
+                                <a href="https://www.google.com/maps/search/?api=1&query=東大門夜市" target="_blank" class="nav-btn">📍 東大門夜市</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=鵝肉先生" target="_blank" class="nav-btn">📍 鵝肉先生</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=歐桑米粉湯" target="_blank" class="nav-btn">📍 歐桑米粉湯</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=約伯賞茶炸彈檸檬茶" target="_blank" class="nav-btn">📍 約伯賞茶</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=蔡記豆花" target="_blank" class="nav-btn">📍 蔡記豆花</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,14 +274,25 @@
                     <div class="time">09:00</div>
                     <div class="event">
                         <div class="event-title">市區早餐 & 出發</div>
-                        <div class="event-detail">推薦壽豐早餐或黎明紅茶，買個 TOP王子手感烘培 路上吃。</div>
+                        <div class="event-detail">
+                            買個早餐準備上路囉：
+                            <div class="nav-group">
+                                <a href="https://www.google.com/maps/search/?api=1&query=壽豐早餐" target="_blank" class="nav-btn">📍 壽豐早餐</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=黎明紅茶" target="_blank" class="nav-btn">📍 黎明紅茶</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=TOP王子手感烘培" target="_blank" class="nav-btn">📍 TOP王子麵包</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="time">10:00</div>
                     <div class="event">
-                        <div class="event-title">東華大學 & 鯉魚潭 <a href="https://www.google.com/maps/search/?api=1&query=鯉魚潭風景遊憩區" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            東華大學 & 鯉魚潭
+                            <a href="https://www.google.com/maps/search/?api=1&query=國立東華大學" target="_blank" class="nav-btn">📍 東華大學</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=鯉魚潭風景遊憩區" target="_blank" class="nav-btn">📍 鯉魚潭</a>
+                        </div>
                         <div class="event-detail">挑一個點散步拍照，感受湖光山色。</div>
                     </div>
                 </div>
@@ -254,7 +300,11 @@
                 <div class="timeline-item">
                     <div class="time">12:30</div>
                     <div class="event">
-                        <div class="event-title">大農大富 & 瑞穗牧場 <a href="https://www.google.com/maps/search/?api=1&query=大農大富平地森林園區" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            大農大富 & 瑞穗牧場
+                            <a href="https://www.google.com/maps/search/?api=1&query=大農大富平地森林園區" target="_blank" class="nav-btn">📍 大農大富</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=瑞穗牧場" target="_blank" class="nav-btn">📍 瑞穗牧場</a>
+                        </div>
                         <div class="event-detail">中午在光復市區用餐，下午到瑞穗牧場喝鮮奶休息。</div>
                     </div>
                 </div>
@@ -262,7 +312,10 @@
                 <div class="timeline-item">
                     <div class="time">15:00</div>
                     <div class="event">
-                        <div class="event-title">六十石山金針花海 <a href="https://www.google.com/maps/search/?api=1&query=六十石山金針花海" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            六十石山金針花海
+                            <a href="https://www.google.com/maps/search/?api=1&query=六十石山金針花海" target="_blank" class="nav-btn">📍 六十石山</a>
+                        </div>
                         <div class="event-detail"><span class="highlight">機車可雙向通行！</span> 注意山路較陡，小心騎乘。</div>
                     </div>
                 </div>
@@ -270,7 +323,10 @@
                 <div class="timeline-item">
                     <div class="time">18:00</div>
                     <div class="event">
-                        <div class="event-title">池上日暉 Check-in <a href="https://www.google.com/maps/search/?api=1&query=池上日暉國際渡假村" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            池上日暉 Check-in
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上日暉國際渡假村" target="_blank" class="nav-btn">📍 日暉渡假村</a>
+                        </div>
                         <div class="event-detail">入住日暉伯爵別墅，好好泡澡放鬆！</div>
                     </div>
                 </div>
@@ -281,7 +337,11 @@
                 <div class="timeline-item">
                     <div class="time">09:30</div>
                     <div class="event">
-                        <div class="event-title">大池豆皮店 & 買貝果 <a href="https://www.google.com/maps/search/?api=1&query=大池豆皮店" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            大池豆皮店 & 買貝果
+                            <a href="https://www.google.com/maps/search/?api=1&query=大池豆皮店" target="_blank" class="nav-btn">📍 大池豆皮店</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=BIKE+DE+KOFFIE" target="_blank" class="nav-btn">📍 米貝果</a>
+                        </div>
                         <div class="event-detail">退房後去吃現煎手工豆皮，順路買 BIKE DE KOFFIE 米貝果。</div>
                     </div>
                 </div>
@@ -289,7 +349,11 @@
                 <div class="timeline-item">
                     <div class="time">11:00</div>
                     <div class="event">
-                        <div class="event-title">伯朗大道 & 錦園洗衣亭 <a href="https://www.google.com/maps/search/?api=1&query=伯朗大道" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            伯朗大道 & 錦園洗衣亭
+                            <a href="https://www.google.com/maps/search/?api=1&query=伯朗大道" target="_blank" class="nav-btn">📍 伯朗大道</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=錦園洗衣亭" target="_blank" class="nav-btn">📍 洗衣亭</a>
+                        </div>
                         <div class="event-detail">騎車漫遊，錦園洗衣亭二樓拍稻田視野極佳。</div>
                     </div>
                 </div>
@@ -297,7 +361,10 @@
                 <div class="timeline-item">
                     <div class="time">13:00</div>
                     <div class="event">
-                        <div class="event-title">奉口冰室吃冰消暑 <a href="https://www.google.com/maps/search/?api=1&query=池上奉口冰室" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            奉口冰室吃冰消暑
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上奉口冰室" target="_blank" class="nav-btn">📍 奉口冰室</a>
+                        </div>
                         <div class="event-detail">炎熱的中午來碗特色刨冰最棒了！</div>
                     </div>
                 </div>
@@ -305,7 +372,10 @@
                 <div class="timeline-item">
                     <div class="time">14:30</div>
                     <div class="event">
-                        <div class="event-title">池上鄉農會直銷驛站 <a href="https://www.google.com/maps/search/?api=1&query=池上鄉農會直銷驛站" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            池上鄉農會直銷驛站
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上鄉農會直銷驛站" target="_blank" class="nav-btn">📍 農會直銷站</a>
+                        </div>
                         <div class="event-detail">搭車前採買池上米、米乖乖等伴手禮。</div>
                     </div>
                 </div>
@@ -313,7 +383,10 @@
                 <div class="timeline-item">
                     <div class="time">回程</div>
                     <div class="event">
-                        <div class="event-title">還車 & 搭乘 21 次火車 <a href="https://www.google.com/maps/search/?api=1&query=池上火車站" target="_blank" class="nav-btn">📍 導航</a></div>
+                        <div class="event-title">
+                            還車 & 搭乘 21 次火車
+                            <a href="https://www.google.com/maps/search/?api=1&query=池上火車站" target="_blank" class="nav-btn">📍 池上車站</a>
+                        </div>
                         <div class="event-detail">池上火車站前還車，帶著滿滿回憶回台北！(發車時間請依車票為準)</div>
                     </div>
                 </div>
@@ -395,6 +468,7 @@
             else if(ratio === '46') { shareZ = total * 0.4; shareX = total * 0.6; }
             else if(ratio === '73') { shareZ = total * 0.7; shareX = total * 0.3; }
             else if(ratio === '37') { shareZ = total * 0.3; shareX = total * 0.7; }
+            else if(ratio === '00') { shareZ = paidZ; shareX = paidX; } // 各付各的
 
             expenses.push({ 
                 name, paidZ, paidX, 
